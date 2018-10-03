@@ -1,0 +1,165 @@
+https://react-cn.github.io/react/downloads.html
+https://reactjs.org/tutorial/tutorial.html
+
+* npm run start
+
+Some Definitions:
+- redux: manager of all components with states
+- components: piece of program
+- state: piece of memory
+- event handling: passing  function through it
+- reducers: what data is used to store OR Reducers take in actions and update part of application state.
+
+- providers: makes store to all available containers
+- containers: fetch apps state data and use it to render ( display ) components.
+
+React:
+- React is javascript library not a framework
+- It is fast and responsive
+- It has composable components
+- It is pluggable
+
+import React from 'react';
+This imported object contains methods that you need in order to use React. The object is called the React library.
+
+import ReactDOM from 'react-dom';
+The methods imported from 'react-dom' are meant for interacting with the DOM.
+
+React.Component is a JavaScript class. To create your own component class, you must subclass React.Component.
+You can do this by using the syntax class YourComponentNameGoesHere extends React.Component {}.
+JSX:
+- It is plain javascript
+- You can write html in javascript code
+- In JSX, you have to include the slash. If you write a self-closing tag in JSX and forget the slash, you will raise an error.
+
+React embraces the fact that rendering logic is inherently coupled with other UI logic: 
+how events are handled, how the state changes over time, and how the data is prepared for display.
+
+==============================================
+const name = 'Josh Perez';
+const element = <h1>Hello, {name}</h1>;
+
+ReactDOM.render(
+  element,
+  document.getElementById('root')
+);
+==============================================
+
+- JSX is an expression too
+- This means that you can use JSX inside of if statements and for loops, assign it to variables 
+accept it as arguments, and return it from functions:
+- ReactDOM.render() is the most common way to render JSX.
+
+==============================================
+function getGreeting(user) {
+  if (user) {
+    return <h1>Hello, {formatName(user)}!</h1>;
+  }
+  return <h1>Hello, Stranger.</h1>;
+}
+==============================================
+
+- Elements are the smallest building blocks of React apps.
+
+Here you can write multiple elements in a single element...
+==============================================
+render: function(){
+    
+  return(
+      
+    <div>
+        
+      <p>Andriod - $114</p>
+        
+      <button onClick={this.buy}>Buy</button>
+      
+    </div>
+    
+  );
+
+}
+==============================================
+
+
+Components and Props:
+- Components let you split the UI into independent, reusable pieces,
+and think about each piece in isolation.
+
+- Conceptually, components are like JavaScript functions. 
+- They accept arbitrary inputs (called “props”) and return React elements describing what should appear on the screen.
+
+Component class variable names must begin with capital letters!
+
+When you import other component, you should write like this:
+import { NavBar } from './NavBar';
+If your filepath doesn't have a file extension, then ".js" is assumed.
+
+Simple Function:
+==============================================
+function Welcome(props) {
+  return <h1>Hello, {props.name}</h1>;
+}
+==============================================
+
+ES6 Function:
+==============================================
+class WelcomeZain extends React.Component {
+  render() {
+    return <h1>Hello, {this.props.name}</h1>;
+  }
+}
+==============================================
+
+Composing Components:
+- Components can refer to other components in their output. 
+- This lets us use the same component abstraction for any level of detail. 
+- A button, a form, a dialog, a screen: in React apps, all those are commonly expressed as components.
+
+State:
+State is similar to props, but it is private and fully controlled by the component.
+
+Handling Events:
+- React events are named using camelCase, rather than lowercase.
+- With JSX you pass a function as the event handler, rather than a string.
+
+==============================================
+<button onClick={activateLasers}>
+  Activate Lasers
+</button>
+==============================================
+
+npm create-react-app ( for create app structure )
+
+==============================================
+
+preventDefault():
+The Event interface's preventDefault() method tells the user agent that if the event does not get explicitly handled, 
+its default action should not be taken as it normally would be. The event continues to propagate as usual,
+unless one of its event listeners calls stopPropagation() or stopImmediatePropagation(), either of which terminates propagation at once.
+
+Stateful Components:
+Stateful components are always class components. As previously mentioned,
+stateful components have a state that gets initialized in the constructor.
+// Here is an excerpt from the counter example
+constructor(props) {
+  super(props);
+  this.state = { count: 0 };
+}
+
+Stateless Components
+You can use either a function or a class for creating stateless components.
+But unless you need to use a lifecycle hook in your components, you should go for
+stateless functional components. There are a lot of benefits if you decide to use
+stateless functional components here; they are easy to write, understand, and test,
+and you can avoid the this keyword altogether. However, as of React v16,
+there are no performance benefits from using stateless functional components over class components.
+
+
+
+
+
+
+
+
+
+

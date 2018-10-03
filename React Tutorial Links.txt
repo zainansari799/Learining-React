@@ -1,0 +1,17 @@
+https://facebook.github.io/react-native/docs/tutorial.html
+https://reactjs.org/docs/hello-world.html
+https://redux.js.org/basics
+
+Tutorial Links:
+https://www.youtube.com/watch?v=-AbaV3nrw6E&list=PL6gx4Cwl9DGBuKtLgPR_zWYnrwv-JllpA ( React Beginners )
+https://www.youtube.com/watch?v=DiLVAXlVYR0 ( react with redux )
+
+Other Links:
+https://camjackson.net/post/9-things-every-reactjs-beginner-should-know
+https://www.youtube.com/watch?v=g9dW-XCAFpc ( simple todo app)
+
+
+
+
+
+
