@@ -1,2 +1,3 @@
-run npm install
-then, run npm start
+Run these commands to run this project
+1-npm install
+2-npm start

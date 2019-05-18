@@ -27,6 +27,7 @@ The methods imported from 'react-dom' are meant for interacting with the DOM.
 
 React.Component is a JavaScript class. To create your own component class, you must subclass React.Component.
 You can do this by using the syntax class YourComponentNameGoesHere extends React.Component {}.
+
 JSX:
 - It is plain javascript
 - You can write html in javascript code
@@ -87,6 +88,7 @@ and think about each piece in isolation.
 
 - Conceptually, components are like JavaScript functions. 
 - They accept arbitrary inputs (called “props”) and return React elements describing what should appear on the screen.
+- Props are used to pass data from parent to child or by the component itself. They are immutable and thus will not be changed.
 
 Component class variable names must begin with capital letters!
 
@@ -105,7 +107,9 @@ ES6 Function:
 ==============================================
 class WelcomeZain extends React.Component {
   render() {
-    return <h1>Hello, {this.props.name}</h1>;
+    return (
+	<h1>Hello, {this.props.name}</h1>
+    );
   }
 }
 ==============================================
@@ -117,6 +121,7 @@ Composing Components:
 
 State:
 State is similar to props, but it is private and fully controlled by the component.
+State is used for mutable data, or data that will change. This is particularly useful for user input.
 
 Handling Events:
 - React events are named using camelCase, rather than lowercase.
@@ -154,12 +159,26 @@ stateless functional components here; they are easy to write, understand, and te
 and you can avoid the this keyword altogether. However, as of React v16,
 there are no performance benefits from using stateless functional components over class components.
 
+propTypes:
+propTypes are useful for two reasons. The first reason is prop validation.
+Validation can ensure that your props are doing what they're supposed to be doing. 
+If props are missing, or if they're present but they aren't what you're expecting, then a warning will print in the console.
 
+This is useful, but reason #2 is arguably more useful: documentation.
+Documenting props makes it easier to glance at a file and quickly understand the component class inside.
+When you have a lot of files, and you will, this can be a huge benefit.
 
+==============================================
+MessageDisplayer.propTypes = {
+  message: React.PropTypes.string
+};
+==============================================
 
+map() Method:
+The map() method creates a new array with the results of calling a provided function on every element in the calling array.
 
-
-
-
+bind() Method:
+Binding functions in React. On a basic level it is taking a component's state, a Javascript object, 
+and using Javascript functions to manipulate that state. The page is then rendered to reflect those changes.
 
 
